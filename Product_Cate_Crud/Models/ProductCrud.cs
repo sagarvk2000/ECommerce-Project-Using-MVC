@@ -61,7 +61,6 @@ namespace Product_Cate_Crud.Models
             return pro;
         }
 
-
         public int AddProduct(Product pro)
         {
             int result = 0;

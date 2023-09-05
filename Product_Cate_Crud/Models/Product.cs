@@ -13,7 +13,7 @@ namespace Product_Cate_Crud.Models
         [Required]
         public string? Imageurl { get; set; }
         [Required]
-        [Display(Name = "Category Name")]
+        [Display(Name = "Category Id")]
         public int Cid { get; set; }
         [Display(Name = "Category Name")]
         public string? Cname { get; set; }
