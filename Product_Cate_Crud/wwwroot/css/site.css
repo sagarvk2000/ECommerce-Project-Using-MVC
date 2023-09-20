@@ -1,5 +1,10 @@
+body{
+    /*background-color:#a6a6cb;*/
+    background-color:#9cc0d9;
+}
+
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -15,4 +20,116 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+.d-block{
+    height:400px;
+}
+
+.image{
+    height:40px;
+    width:40px;
+}
+
+#Electronices img {
+    width: 250px !important;
+    height: 250px !important;
+    margin-top:15px;
+    margin-left:90px;
+}
+
+#gap{
+    margin-right:25px;
+}
+
+div h2 {
+    padding: 10px 10px 10px 10px;
+    background-color: #5e8fb2;
+    text-align: center;
+}
+
+.footer {
+    background-color: #4d5a63;
+    position: relative !important;
+    color: black;
+    height: 300px;
+    border-bottom: 0px;
+}
+.foot {
+    line-height: 30px;
+    margin-top: 10px;
+}
+
+.logo {
+    height: 200px;
+    width: 200px;
+}
+
+.logo:hover {
+    height: 120px;
+    width: 190px;
+}
+
+/*Single pAge*/
+#mainNav {
+    margin-left: 20px;
+    color: black;
+}
+
+.navbar-brand {
+    color: aliceblue;
+}
+
+#menu.container-fluid {
+    background-color: white;
+    height: 30px;
+}
+
+.fa-tag {
+    color: #44940c;
+}
+
+.d {
+    height: 22px;
+    width: 50px;
+    background-color: #3b7f1e;
+    border: none;
+    color: aliceblue;
+}
+#delivery{
+    width:100px;
+}
+/*Site css*/
+.add {
+    height: 30px;
+    width: 150px;
+    font-size: 12px
+}
+
+/*user product list*/
+.card {
+    height: 480px;
+    width: 300px;
+    margin-top: 20px;
+    background-color: #b4dfef;
+}
+
+.singleImg{
+    margin-top:10px;
+margin-left:50px;
+border:2px solid gray;
+}
+
+.singleImg:hover{
+border:5px solid #afc7d8;
+    }
+
+.button1 {
+    background-color:#808080;
+    border: none;
+}
+
+/*Contact us*/
+#comments{
+    width:420px;
 }

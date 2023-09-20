@@ -1,0 +1,109 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model Product_Cate_Crud.Models.Product
+
+ <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <img src="@Url.Content(Model.Imageurl)" height="250" width="250" />
+                      </div>
+                    </div>
+                    <br />
+                    <br />
+                   <a href="/Cart/AddToCart/@Model.Id" class="btn btn-warning "><i class="fa fa-shopping-cart" aria-hidden="true"></i>Add To Cart</a>
+                   <a href="#" class="btn btn-success "><i class="fa fa-bolt" aria-hidden="true"></i>Buy Now</a>
+
+
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h5>@Model.Name</h5>
+                <p>Product code:IND1264</p>
+                <button class="d">
+                    4.5<i class="fa fa-star" aria-hidden="true"></i>
+                </button>
+
+                <div>
+                    <h3><i class="fa fa-inr" aria-hidden="true"></i><span>@Model.Price</span></h3> 11% off
+                </div>
+
+                <div class="row">
+                    <br />
+                    <div class="row">
+                        <div class="col-md-10">
+                            <b>Available offers</b>
+                            <ul type="none">
+                                <li><i class="fa fa-tag" aria-hidden="true"></i> <b>Bank Offer</b> Get 10% Cashback on Samsung Axis bank Credit Card <span id="t1"><b>T&C</b></span> </li>
+                                <li><i class="fa fa-tag" aria-hidden="true"></i><b>Bank Offer</b> Flat ₹1,000 off on HDFC Bank Credit Card EMI Trxns on orders priced between ₹15,000 to ₹49,999 <span id="t1"><b>T&C</b></span></li>
+                                <li><i class="fa fa-tag" aria-hidden="true"></i><b>Special Price</b> Get extra ₹7000 off (price inclusive of cashback/coupon) <span id="t1"><b>T&C</b></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2 "><b>Delivery</b></div>
+                        <div class="col-md-10">
+                            <div class="input-group mb-3" style="width:300px">
+  <button class="btn btn-outline-secondary" type="button" id="button-addon1"><i class="fa fa-location-arrow" aria-hidden="true"></i></button>
+  <input type="text" class="form-control" id="delivery" placeholder="Pincode" aria-label="Example text with button addon" aria-describedby="button-addon1">
+</div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-2 "><b>Services</b></div>
+                        <div class="col-md-10">
+                            <ul>
+                                <li>
+                                    <span>2 Year Warranty</span>
+                                </li>
+                                <li>
+                                    <span>Cash on Delivery available</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <p><b>Easy Payment Option</b></p>
+                        </div>
+                        <div class="col-md-10">
+                            <ul>
+                                <li>No cost EMI starting from ₹13,889/month</li>
+                                <li>Cash on Delivery</li>
+                                <li>Net banking & Credit/ Debit/ ATM card</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                   <div class="row">
+                        <div class="col-md-2">
+                            <p><b>Seller</b></p>
+                        </div>
+                        <div class="col-md-10">
+                            <p>Flipkart</p>
+                            <ul>
+                                <li>7 Days Service Center Replacement/Repair</li>
+                                <li>GST invoice available</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>

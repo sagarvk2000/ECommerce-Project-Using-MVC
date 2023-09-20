@@ -1,0 +1,42 @@
+﻿@model Product_Cate_Crud.Models.ContactUs
+
+@{
+    ViewData["Title"] = "ContactUs";
+}
+
+<h1>ContactUs</h1>
+
+<h4>ContactUs</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ContactUs">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNo" class="control-label"></label>
+                <input asp-for="PhoneNo" class="form-control" />
+                <span asp-validation-for="PhoneNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comments" class="control-label"></label>
+                <textarea name="comments" id="comments"></textarea>
+                <span asp-validation-for="Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+            <div>
+                <address>
+                     Mypkart Internet Private Limited,Buildings Alyssa, Begonia &Clove Embassy Tech Village, Outer Ring Road, Uk Village, Solapur, 560103Maharashtra, India
+                </address>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-8">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30267.79408134952!2d73.80947897200616!3d18.507458521139935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c08a77d0be21%3A0xb1321b518d746811!2sFlipkart%20Ekart!5e0!3m2!1sen!2sin!4v1694867125407!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>
+</div>

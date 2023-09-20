@@ -3,9 +3,6 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Index</h1>
-
 <p>
     <a asp-action="Create">Add Product</a>
 </p>
@@ -24,13 +21,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.Imageurl)
             </th>
-            <th>
+@*            <th>
                 @Html.DisplayNameFor(model => model.Cid)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Cname)
             </th>
-            <th></th>
+            <th>
+                Actions
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -49,9 +48,6 @@
                <img src="@Url.Content(item.Imageurl)" height="150" width="200"/>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Cid)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Cname)
             </td>
             <td>
@@ -63,3 +59,4 @@
 }
     </tbody>
 </table>
+

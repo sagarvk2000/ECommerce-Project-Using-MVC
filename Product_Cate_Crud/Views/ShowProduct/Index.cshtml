@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Product_Cate_Crud.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Pager pager = new Pager();
+    int pageNo = 0;
+
+    if(ViewBag.Pager != null){
+        
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+
+    }
+}
+<div class="container">
+    @if(pager.TotalPages > 0){
+        <ul class="pagination justify-content-end">
+            @for(var pge = pager.StartPage;pge <= pager.EndPage; pge++ ){
+                <li class="page-item @(pge == pager.CurrentPage ? "active" : "")">
+                    <a class="page-link" asp-controller= "ShowProduct" asp-action="Index" asp-route-pg="@pge"> @pge </a>
+                    </li>
+            }
+        </ul>
+    }
+</div>
+
+<div class="container">
+        <div class="row productRow">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3 product">
+                <div class="card productlist">
+                    <img src="@Url.Content(item.Imageurl)" height="150" width="200" class="singleImg" />
+
+                       <table class="singletable">
+
+
+                        <tr height="120px">
+                                <td colspan="2" style="padding-left:15px" height="50px">
+                                <br /> <h5>@Html.DisplayFor(modelItem => item.Name)</h5>
+                                </td>                           
+                            </tr>
+
+                            <tr>
+                            <td style="padding-left:15px"><br /> <h5>Price</h5></td>
+                            <td><br /><h5>@Html.DisplayFor(modelItem => item.Price)</h5></td>
+                            </tr>
+
+                            <tr>
+                            <td style="padding-left:15px"><br /> <h5>Category</h5> </td>
+                            <td><br /><h6>@Html.DisplayFor(modelItem => item.Cname)</h6></td>
+                            </tr>
+
+                            <tr>
+                            <td style="padding-left:25px">
+                                <br />
+                                <a href="/Cart/AddToCart/@item.Id" class="btn btn-primary button">Add to cart </a>
+                                </td>
+                            <td style="padding-right:25px">
+                                <br />
+                                    <a href="/User/SingleProduct/@item.Id" class="btn btn-primary button1">View more </a>
+                                </td>
+                            </tr>
+
+                       </table>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>

@@ -13,6 +13,10 @@ namespace Product_Cate_Crud.Controllers
             _logger = logger;
         }
 
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
         public IActionResult Index()
         {
             return View();
